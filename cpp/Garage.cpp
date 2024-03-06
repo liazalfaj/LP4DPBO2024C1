@@ -1,6 +1,6 @@
 // Menggunakan pragma once agar header file hanya di-include satu kali
 #pragma once
-// Memasukan library yang digunakan, termasuk kelas induk (kelas Sivitas Akademik) dari kelas Mahasiswa serta kelas yang dimiliki oleh mahasiswa (kelas Laptop dan Dosen)
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,7 +14,6 @@ using namespace std;
 class Garage
 {
 private:
-    // Atribut yang digunakan pada kelas Mahasiswa terdiri dari nim dan fakultas yang merupakan identitas pembeda antar mahasiswa satu dengan lainnya. Setiap mahasiswa memiliki laptop dan dosen wali
     string namaGarasi;
     string luasGarasi;
 	vector<Car> kendaraanMobil;
@@ -78,7 +77,6 @@ public:
 		this->kendaraanMotor.push_back(kendaraanMotor);
 	}
 
-    // Method getter untuk mendapatkan nilai setiap atribut pada kelas Mahasiswa
     string getNamaGarasi()
     {
         return namaGarasi;
@@ -93,13 +91,13 @@ public:
 
     vector<Car> getCar()
     {
-        return kendaraanMobil;
+        return this->kendaraanMobil;
     }
 
 
     vector<Motorcycle> getMotorcycle()
     {
-        return kendaraanMotor;
+        return this->kendaraanMotor;
     }
 
 
