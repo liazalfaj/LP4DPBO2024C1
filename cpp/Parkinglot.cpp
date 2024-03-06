@@ -1,6 +1,6 @@
 // Menggunakan pragma once agar header file hanya di-include satu kali
 #pragma once
-// Memasukan library yang digunakan, termasuk kelas induk (kelas Sivitas Akademik) dari kelas Mahasiswa serta kelas yang dimiliki oleh mahasiswa (kelas Laptop dan Dosen)
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,10 +14,9 @@ using namespace std;
 class ParkingLot
 {
 private:
-    // Atribut yang digunakan pada kelas Mahasiswa terdiri dari nim dan fakultas yang merupakan identitas pembeda antar mahasiswa satu dengan lainnya. Setiap mahasiswa memiliki laptop dan dosen wali
     int kapasitas;
     vector<Car> jumlahKendaraanMobil;
-	vector<Motorcycle>jumlahKendaraanMotor;
+	vector<Motorcycle> jumlahKendaraanMotor;
 	string jumlahKeseluruhan;
 
 public:
@@ -63,24 +62,18 @@ public:
         this->kapasitas = kapasitas;
     }
 
+	void addCar(Car jumlahKendaraanMobil){
+		this->jumlahKendaraanMobil.push_back(jumlahKendaraanMobil);
+	}
 
-    void setJumlahKendaraanMobil(vector<Car> jumlahKendaraanMobil)
-    {
-        this->jumlahKendaraanMobil = jumlahKendaraanMobil;
-    }
-
-
-    void setJumlahKendaraanMotor(vector<Motorcycle>jumlahKendaraanMotor)
-    {
-        this->jumlahKendaraanMotor = jumlahKendaraanMotor;
-    }
+	void addMotorcycle(Motorcycle jumlahKendaraanMotor){
+		this->jumlahKendaraanMotor.push_back(jumlahKendaraanMotor);
+	}
 
 	void setJumlahKeseluruhan(string jumlahKeseluruhan)
     {
         this->jumlahKeseluruhan = jumlahKeseluruhan;
     }
-
-    // Method getter untuk mendapatkan nilai setiap atribut pada kelas Mahasiswa
     int getKapasitas()
     {
         return kapasitas;
@@ -89,12 +82,12 @@ public:
 
     vector<Car> getJumlahKendaraanMobil()
     {
-        return jumlahKendaraanMobil;
+        return this->jumlahKendaraanMobil;
     }
 
 	vector<Motorcycle> getJumlahKendaraanMotor()
     {
-        return jumlahKendaraanMotor;
+        return this->jumlahKendaraanMotor;
     }
 
 	string getJumlahKeseluruhan()
