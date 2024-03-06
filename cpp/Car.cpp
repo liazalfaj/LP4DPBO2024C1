@@ -9,15 +9,9 @@
 //deklarasi namespace
 using namespace std;
 
-
-/*kelas Sivitas Akademik yang digunakan untuk merepresentasikan data Sivitas Akademiik,
-Sivitas Akademik merupakan masyarakat akademik yang terdiri atas dosen dan mahasiswa, Sehingga kelas 
-SIvitas Akademik merupakan kelas turunan dari kelas HUman dan kelas induk dari kelas Mahasiswa dan Dosen*/
-
 class Car : public Vehicle{
 	private:
 
-	//atribut yang dugunakan pada kelas Sivitas Akademik terdiri dari asal universitas dan email edu
 
 	string jumlahKursi;
 	string jumlahPintu;
@@ -39,26 +33,22 @@ class Car : public Vehicle{
 	//constructor : overloading
 	Car(string jumlahKursi, string jumlahPintu, string plat, string merk, string tahunProduksi, string warna) : Vehicle(plat, merk, tahunProduksi, warna){
 		this->jumlahKursi = jumlahKursi;	
-		jumlahPintu = jumlahPintu;
+		this->jumlahPintu = jumlahPintu;
 	}
-
-	//method set untuk set setiap nilai atribut pada kelas Sivitas Akademik
 
 	void setJumlahKursi(string jumlahKursi){
 		this->jumlahKursi = jumlahKursi;
 	}
 
-	void setjumlahPintu(string jumlahPintu){
-		jumlahPintu = jumlahPintu;
+	void setJumlahPintu(string jumlahPintu){
+		this->jumlahPintu = jumlahPintu;
 	}
-
-	//methode get untuk mendapatkan nilai setiap atribut pada kelas sivitas akademik
 
 	string getJumlahKursi(){
 		return jumlahKursi;
 	}
 
-	string getjumlahPintu(){
+	string getJumlahPintu(){
 		return jumlahPintu;
 	}
 
