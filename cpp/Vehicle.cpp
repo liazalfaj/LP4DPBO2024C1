@@ -47,7 +47,7 @@ class Vehicle {
 		this->plat = plat;
 		this->merk = merk;
 		this->tahunProduksi = tahunProduksi;
-		warna = warna;
+		this->warna = warna;
 	}
 
 	// Getter and Setter
@@ -63,7 +63,7 @@ class Vehicle {
 	}
 
 	// Get merk
-	string get_merk() {
+	string getMerk() {
 		return merk;
 	}
 
@@ -73,7 +73,7 @@ class Vehicle {
 	}
 
 	// Get tahunProduksi
-	string get_tahunProduksi() {
+	string getTahunProduksi() {
 		return tahunProduksi;
 	}
 
@@ -83,13 +83,13 @@ class Vehicle {
 	}
 
 	// Get warna
-	string get_warna() {
+	string getWarna() {
 		return warna;
 	}
 
 	// Set warna
 	void set_warna(string warna) {
-		warna = warna;
+		this->warna = warna;
 	}
 
 	~Vehicle(){
