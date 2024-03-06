@@ -24,7 +24,7 @@ class Motorcycle : public Vehicle{
 
 	Motorcycle(string jenisMotor, string kapasitasTanki, string plat, string merk, string tahunProduksi, string warna) : Vehicle(plat, merk, tahunProduksi, warna) {
 		this->jenisMotor = jenisMotor;
-		kapasitasTanki = kapasitasTanki;
+		this->kapasitasTanki = kapasitasTanki;
 	}
 
 	// Getter and Setter
